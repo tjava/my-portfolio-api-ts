@@ -8,9 +8,12 @@ const port = config.get<number>("port");
 
 const server = express();
 
+server.use(express.json());
+
 server.listen(port, async () => {
     log.info(`server listenig on port ${port}`);
 
     await connect();
+    
     routes(server);
 });
