@@ -18,7 +18,7 @@ export async function createSkill(input: SkillInput) {
 export async function findAllSkill() {
 
   try {
-    const result = await SkillModel.find({}).select("name").select("image");
+    const result = await SkillModel.find({}).select("name").select("image").select("skillId");
     return result;
   } catch (error) {
 
