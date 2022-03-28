@@ -1,8 +1,5 @@
 import { Request, Response } from "express";
-import {
-  CreateSkillInput,
-  UpdateSkillInput,
-} from "../schemas/skill.schema";
+import { CreateSkillInput, UpdateSkillInput } from "../schemas/skill.schema";
 import {
   createSkill,
   deleteSkill,
@@ -15,19 +12,17 @@ export async function createSkillHandler(
   req: Request<{}, {}, CreateSkillInput["body"]>,
   res: Response
 ) {
-
   const body = req.body;
 
   const skill = await createSkill({ ...body });
 
-  return res.status(200).json({status: 'successful', skill});
+  return res.status(200).json({ status: "successful", skill });
 }
 
 export async function updateSkillHandler(
   req: Request<UpdateSkillInput["params"]>,
   res: Response
 ) {
-
   const skillId = req.params.skillId;
   const update = req.body;
 

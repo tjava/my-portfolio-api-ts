@@ -1,30 +1,30 @@
 import { object, string, TypeOf, array } from "zod";
 
 const payload = {
-    body: object({
-        name: string({
-            required_error: "Name is required",
-        }),
-        description: string({
-            required_error: "Description is required",
-        }),
-        detailDescription: string({
-            required_error: "Detail Description is required",
-        }),
-        image: string({
-            required_error: "Image is required",
-        }),
-        techStack: array(
-			string({
-                required_error: "Tech Stack is required"
-            }),
-		),
-        links: array(
-			string({
-                required_error: "Tech Stack is required"
-            }),
-		),
+  body: object({
+    name: string({
+      required_error: "Name is required",
     }),
+    description: string({
+      required_error: "Description is required",
+    }),
+    detailDescription: string({
+      required_error: "Detail Description is required",
+    }),
+    image: string({
+      required_error: "Image is required",
+    }),
+    techStack: array(
+      string({
+        required_error: "Tech Stack is required",
+      })
+    ),
+    links: array(
+      string({
+        required_error: "Tech Stack is required",
+      })
+    ),
+  }),
 };
 
 const params = {

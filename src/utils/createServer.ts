@@ -1,15 +1,14 @@
 import express from "express";
 import routes from "../routes";
 
-function  createServer() {
-    
-    const server = express();
+function createServer() {
+  const server = express();
 
-    server.use(express.json());
+  server.use(express.json());
 
-    routes(server);
+  routes(server);
 
-    return server
+  return server;
 }
 
 export default createServer;

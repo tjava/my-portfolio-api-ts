@@ -15,7 +15,6 @@ export async function createProjectHandler(
   req: Request<{}, {}, CreateProjectInput["body"]>,
   res: Response
 ) {
-
   const body = req.body;
 
   const project = await createProject({ ...body });
@@ -27,7 +26,6 @@ export async function updateProjectHandler(
   req: Request<UpdateProjectInput["params"]>,
   res: Response
 ) {
-
   const projectId = req.params.projectId;
   const update = req.body;
 

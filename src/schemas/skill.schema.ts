@@ -1,14 +1,14 @@
 import { object, string, TypeOf, array } from "zod";
 
 const payload = {
-    body: object({
-        name: string({
-            required_error: "Name is required",
-        }),
-        image: string({
-            required_error: "Image is required",
-        }),
+  body: object({
+    name: string({
+      required_error: "Name is required",
     }),
+    image: string({
+      required_error: "Image is required",
+    }),
+  }),
 };
 
 const params = {

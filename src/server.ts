@@ -14,8 +14,7 @@ const server = createServer();
 server.use("/docs", swaggerUI.serve, swaggerUI.setup(swaggerJsDocs));
 
 server.listen(port, async () => {
-    log.info(`server listenig on port ${port}`);
+  log.info(`server listenig on port ${port}`);
 
-    await connect();
-
+  await connect();
 });
