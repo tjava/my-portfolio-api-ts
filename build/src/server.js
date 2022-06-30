@@ -22,7 +22,7 @@ const port = config_1.default.get("port");
 const swaggerJsDocs = yamljs_1.default.load("./docs.yaml");
 const server = (0, createServer_1.default)();
 server.use("/docs", swagger_ui_express_1.default.serve, swagger_ui_express_1.default.setup(swaggerJsDocs));
-server.listen(port, () => __awaiter(void 0, void 0, void 0, function* () {
+server.listen(() => __awaiter(void 0, void 0, void 0, function* () {
     logger_1.default.info(`server listenig on port ${port}`);
     yield (0, connect_1.default)();
 }));
